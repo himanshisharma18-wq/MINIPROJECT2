@@ -1,3 +1,3 @@
-# this is my second mini project  . 
+# This is my second mini project  . 
 <br>
 <p>" ROCK PAPER AND SCISSOR GAME ."</p>
