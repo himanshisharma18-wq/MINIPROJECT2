@@ -1,5 +1,6 @@
 let userscore =0 ;
 let compscore= 0;
+let userwin ;
 
 const choices = document.querySelectorAll(".choice") ;
 
@@ -10,6 +11,12 @@ const scorecomp = document.querySelector("#comp-score") ;
 
 
 
+//draw fun
+const draw =() =>{
+console.log("match was draw");
+msg.innerText = "match is drawed ! play again" ;
+msg.style.backgroundColor = "black";
+}
 
 
 //winner fun
@@ -32,11 +39,6 @@ msg.style.backgroundColor = "green";
 }
 }
 
-//draw fun
-const draw =() =>{
-console.log("match was draw");
-msg.innerText = `match is drawed ! play again` ;
-}
 
 
 //compchoice fun
@@ -55,8 +57,9 @@ console.log(userchoice) ;
 console.log(` choice was clicked by computer ${compchoice}`) ;
 
 
-if( compchoice=== userchoice ){
+if(userchoice===compchoice){
     draw() ;
+    
 }else{
     userwin =true ;
     if(compchoice==="rock"){
@@ -69,9 +72,10 @@ if( compchoice=== userchoice ){
     if(compchoice==="scissors"){
       userwin=  userchoice==="paper"?false:true ;
     }
+    winner(userwin ,userchoice,compchoice) ;
 }
 
-winner(userwin ,userchoice,compchoice) ;
+
 }
 
 
